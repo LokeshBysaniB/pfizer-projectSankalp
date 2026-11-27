@@ -85,10 +85,10 @@ python checks/run_checks.py   # 15 golden policy checks on real prepared data
 2. Import project in Vercel; set `OPENROUTER_API_KEY` (optional `MODEL`).
 3. Deploy; `public/` is served from the CDN, `/api/*` hits `app.py`.
 
-## Architecture PDF
+## Architecture PDF (local only)
 
 ```bash
-python3 scripts/export_architecture_pdf.py   # writes ARCHITECTURE_NOTE.pdf
+python3 scripts/export_architecture_pdf.py   # writes ARCHITECTURE_NOTE.pdf (gitignored)
 ```
 
 ## Out of scope (pilot)
