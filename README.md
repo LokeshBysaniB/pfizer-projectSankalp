@@ -1,6 +1,6 @@
 # Project Sankalp — Pfizer GM channel pilot
 
-Fictional **FDE Academy** case. **Private repository** — do not make public.
+
 
 LangGraph assistant for Pfizer Limited General Medicines trade channel:
 
