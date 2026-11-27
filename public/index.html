@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<title>Project Sankalp: channel check</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css?v=18">
+</head>
+<body>
+<div class="app-shell">
+  <button type="button" id="sidebar-toggle" class="sidebar-toggle" aria-expanded="false" aria-controls="sidebar">
+    <span class="sidebar-toggle-bar" aria-hidden="true"></span>
+    <span class="sidebar-toggle-bar" aria-hidden="true"></span>
+    <span class="sidebar-toggle-bar" aria-hidden="true"></span>
+    <span class="visually-hidden">Open navigation</span>
+  </button>
+  <div id="sidebar-backdrop" class="sidebar-backdrop" hidden></div>
+
+  <aside id="sidebar" class="sidebar" aria-label="Main navigation">
+    <p class="sidebar-brand">
+      <span class="sidebar-mark" aria-hidden="true">◆</span>
+      <span class="sidebar-name">Project Sankalp</span>
+    </p>
+    <p class="sidebar-tagline">Pfizer GM trade channel</p>
+    <nav class="sidebar-nav">
+      <button type="button" class="sidebar-link nav-view" data-view="overview" id="nav-overview">Overview</button>
+      <button type="button" class="sidebar-link nav-view is-active" data-view="ask" id="nav-ask">Ask</button>
+      <button type="button" class="sidebar-link nav-scroll" data-scroll="history-panel" id="nav-history">Recent questions</button>
+    </nav>
+    <p class="sidebar-foot">Recommendations only — people decide.</p>
+  </aside>
+
+  <div class="main">
+    <div id="view-overview" class="main-view" hidden>
+      <header class="main-header">
+        <p class="eyebrow">Overview</p>
+        <h1>What this tool can do</h1>
+        <p class="lead">Two policy checks for Pfizer GM trade channel. Answers come from prepared data and coded rules — recommendations only; people decide.</p>
+      </header>
+      <section class="intro-panel overview-panel" aria-labelledby="overview-body">
+        <h2 id="overview-body" class="visually-hidden">Capabilities</h2>
+        <div class="intro-grid">
+          <div class="intro-block">
+            <h3 class="intro-heading">Scheme cap</h3>
+            <p class="intro-policy">Free goods at PTS must stay within <strong>3%</strong> of a quarter&apos;s primary sales (CO-POL-014 §4.4).</p>
+            <ul class="intro-list">
+              <li>See how a past or current quarter performed against the cap</li>
+              <li>Estimate a planned offer (ratio or extra free goods) before a circular goes out</li>
+              <li>Total excess across quarters, for Controller and CFO review</li>
+            </ul>
+          </div>
+          <div class="intro-block">
+            <h3 class="intro-heading">Claims window</h3>
+            <p class="intro-policy">Near-expiry and expired claims must fall in the <strong>90-day</strong> windows before or after batch expiry (claims policy §5.2).</p>
+            <ul class="intro-list">
+              <li>Check one new claim at intake (batch, dates, outcome)</li>
+              <li>Summarise credited claims outside the window and amounts</li>
+              <li>Download the full register for recovery work (<code>firm</code>, <code>confirm</code>, <code>cannot_verify</code>)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <p class="overview-cta-wrap">
+        <button type="button" class="overview-cta nav-view" data-view="ask">Go to Ask</button>
+      </p>
+    </div>
+
+    <div id="view-ask" class="main-view">
+      <header class="main-header main-header-compact">
+        <p class="eyebrow">Ask</p>
+        <h1>Project Sankalp: channel check</h1>
+        <p class="lead">Type a question or pick an example below.</p>
+      </header>
+
+    <section class="panel ask-panel" aria-labelledby="ask-label">
+      <h2 id="ask-label" class="panel-title">Ask a question</h2>
+      <form id="ask" class="ask-form">
+        <input id="q" placeholder="e.g. How many credited claims were outside the 90-day window?" autocomplete="off" aria-label="Your question">
+        <button type="submit">Ask</button>
+      </form>
+      <p id="status" class="status" role="status"></p>
+    </section>
+
+    <details class="panel examples-panel examples-details" open>
+      <summary class="examples-summary">
+        <span class="examples-summary-title">Try an example question</span>
+        <span class="examples-summary-hint">Collapsed — pick a starter for scheme cap or claims</span>
+      </summary>
+      <p class="examples-lead">Tap a line to fill the box above, then edit or press Ask.</p>
+      <div class="examples-columns">
+        <details class="example-topic" id="scheme-examples" open>
+          <summary class="example-topic-summary">
+            <span>Scheme cap</span>
+            <span class="example-topic-count">6</span>
+          </summary>
+          <ul class="example-list">
+            <li><button type="button" class="example-item">How is Q3 FY27 doing against the scheme cap?</button></li>
+            <li><button type="button" class="example-item">What if we run 10 + 1.5 on Tier A in December 2026?</button></li>
+            <li><button type="button" class="example-item">What if we run 10 + 2.5 on Tier A in December 2026?</button></li>
+            <li><button type="button" class="example-item">How did Q3 FY25 do against the scheme cap?</button></li>
+            <li><button type="button" class="example-item">How much have we gone over the cap in total, and per year?</button></li>
+            <li><button type="button" class="example-item">Two December 2026 requests: 10 + 1.5 on Tier A and INR 0.3 Cr extra free goods — approve both?</button></li>
+          </ul>
+        </details>
+        <details class="example-topic" id="claims-examples" open>
+          <summary class="example-topic-summary">
+            <span>Claims window</span>
+            <span class="example-topic-count">4</span>
+          </summary>
+          <ul class="example-list">
+            <li><button type="button" class="example-item">Check a near expiry claim for batch DEMO2612 raised on 15-02-2027</button></li>
+            <li><button type="button" class="example-item">Check a near expiry claim for batch DEMO2613 raised on 20-11-2026</button></li>
+            <li><button type="button" class="example-item">Is an expired claim for batch DEMO2511 raised on 15-02-2026 valid?</button></li>
+            <li><button type="button" class="example-item">How many credited claims were outside the 90-day window, and how much money?</button></li>
+          </ul>
+          <p class="example-foot"><a href="/api/recovery-list.csv">Recovery list (CSV)</a><span class="example-foot-sep">·</span>filter <code>group</code>: firm, confirm, cannot_verify</p>
+        </details>
+      </div>
+    </details>
+
+    <section id="history-panel" class="panel history-panel" hidden aria-labelledby="history-label">
+      <div class="history-head">
+        <h2 id="history-label" class="panel-title">Recent questions</h2>
+        <button type="button" id="history-clear" class="link-btn">Clear</button>
+      </div>
+      <p class="history-hint">Stored in this browser tab only (last 5).</p>
+      <ul id="history-list" class="history-list"></ul>
+    </section>
+
+    <section id="out" class="panel result-panel" hidden>
+      <h2 class="panel-title">Result</h2>
+      <div id="result-verdict" class="verdict" hidden aria-live="polite"></div>
+      <div id="claim-facts" class="claim-facts" hidden></div>
+      <div id="narrative-wrap" class="result-block narrative-block" hidden>
+        <h3 id="narrative-heading" class="block-title">Plain-language summary</h3>
+        <p id="answer-narrative"></p>
+      </div>
+      <details id="numbers-wrap" class="numbers-details" hidden>
+        <summary class="numbers-summary">
+          <span class="summary-title">View detailed numbers</span>
+          <span id="numbers-teaser" class="summary-teaser"></span>
+        </summary>
+        <div id="answer-highlights" class="metrics metrics-in-details" hidden></div>
+        <div id="answer-table"></div>
+      </details>
+      <p id="answer-disclaimer" class="disclaimer" hidden></p>
+      <details class="evidence-details" open>
+        <summary>Evidence — sources and values</summary>
+        <div id="evidence-summary" class="evidence-summary"></div>
+        <details class="evidence-raw">
+          <summary>Raw tool JSON</summary>
+          <p class="raw-toolbar">
+            <button type="button" id="audit-download" class="link-btn" hidden>Download audit pack (JSON)</button>
+          </p>
+          <pre id="evidence"></pre>
+        </details>
+      </details>
+    </section>
+    </div>
+  </div>
+</div>
+<script src="/app.js?v=18"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+check_id,tool,args_json,assert_field,assert_value,notes
+1,scheme_quarter,"{""period"": ""Q3 FY25""}",free_pct,4.95,Q3 FY25 over cap
+2,scheme_quarter,"{""period"": ""Q3 FY27""}",free_pct,2.92,Current quarter under cap
+3,scheme_quarter,"{""period"": ""Q3 FY25""}",over_cap,true,Excess quarter flag
+4,scheme_summary,{},total_excess_cr,3.95,Seven quarters over cap total
+5,window_summary,{},verifiable_breaches.claims,184,Recovery list credited breaches
+6,check_claim,"{""batch_no"": ""K2310149"", ""claim_date"": ""20-12-2024"", ""claim_type"": ""near expiry""}",outcome,reject,Too early near-expiry
+7,check_claim,"{""batch_no"": ""K2310149"", ""claim_date"": ""20-12-2024"", ""claim_type"": ""near expiry""}",code,TOO_EARLY,Code for early claim
+8,check_claim,"{""batch_no"": ""K2330377"", ""claim_date"": ""21-07-2025"", ""claim_type"": ""expired""}",code,TOO_LATE,Expired after 90d window
+9,check_claim,"{""batch_no"": ""DEMO2612"", ""claim_date"": ""15-02-2027"", ""claim_type"": ""near expiry""}",outcome,pass,Demo batch in window
+10,check_claim,"{""batch_no"": ""DEMO2613"", ""claim_date"": ""20-11-2026"", ""claim_type"": ""near expiry""}",outcome,reject,Demo batch too early
+11,check_claim,"{""batch_no"": ""DEMO2511"", ""claim_date"": ""15-02-2026"", ""claim_type"": ""expired""}",code,TOO_LATE,Demo expired too late
+12,assess_requests,"{""requests"": [{""tier_a_free"": 1.5}], ""period"": ""December 2026""}",within_cap,true,Modest offer within cap
+13,assess_requests,"{""requests"": [{""tier_a_free"": 2.5}], ""period"": ""December 2026""}",within_cap,false,Aggressive offer over cap
+14,assess_requests,"{""requests"": [{""tier_a_free"": 2.0}], ""period"": ""December 2026""}",basis_quarter,Q3 FY27,Uses current quarter data
+15,check_claim,"{""batch_no"": ""ZZ999"", ""claim_date"": ""21-07-2025"", ""claim_type"": ""expired""}",code,NO_BATCH,Missing batch escalate

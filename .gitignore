@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+.vercel/
+.pytest_cache/
+# raw sales file: big, not needed on the server
+data/primary_sales.csv
+.DS_Store
+build/
+PROJECT_MEMORY.md
